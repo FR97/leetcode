@@ -10,7 +10,7 @@ func searchRange(nums []int, target int) []int {
 		if nums[j] == target && end == -1 {
 			end = j
 		}
-		if start != -1 && end != -1 {
+		if (start != -1 && end != -1) || (start != -1 && nums[j] < target) || (end != -1 && nums[i] > target) {
 			return []int{start, end}
 		}
 	}
