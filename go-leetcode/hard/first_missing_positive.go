@@ -1,7 +1,7 @@
 package hard
 
 func firstMissingPositive(nums []int) int {
-	indexed := make([]bool, len(nums)+1)
+	indexed := make([]bool, len(nums)+2)
 
 	for i := 0; i < len(nums); i++ {
 		v := nums[i]
