@@ -18,9 +18,9 @@ pub fn int_to_roman(num: i32) -> String {
     let mut n = num;
     let mut result = String::new();
 
-    for (value, symbol) in mappings {
-        result =  result + &(symbol.repeat((n / value) as usize));
-        n = n % value;
+    for (number, symbol) in mappings {
+        result =  result + &(symbol.repeat((n / number) as usize));
+        n = n % number;
     }
 
     return result
