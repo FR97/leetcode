@@ -7,12 +7,12 @@ pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
             break;
         }
 
-        if cM > 0 && nums1[(cM - 1)] > nums2[(cN - 1)] {
+        if cM > 0 && nums1[cM - 1] > nums2[cN - 1] {
             cM -= 1;
-            nums1[(cM + cN)] = nums1[(cM)];
+            nums1[cM + cN] = nums1[cM];
         } else {
             cN -= 1;
-            nums1[(cM + cN)] = nums2[(cN)];
+            nums1[cM + cN] = nums2[cN];
         }
     }
 }
