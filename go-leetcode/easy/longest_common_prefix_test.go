@@ -1,18 +1,19 @@
-package medium
+package easy
 
 import (
+	"github.com/FR97/leetcode/go-leetcode/medium"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestLongestCommonPrefixCase1(t *testing.T) {
 	expected := "fl"
-	actual := longestCommonPrefix([]string{"flower", "flow", "flight"})
+	actual := medium.longestCommonPrefix([]string{"flower", "flow", "flight"})
 	assert.Equal(t, expected, actual)
 }
 
 func TestLongestCommonPrefixCase2(t *testing.T) {
 	expected := ""
-	actual := longestCommonPrefix([]string{"dog", "racecar", "car"})
+	actual := medium.longestCommonPrefix([]string{"dog", "racecar", "car"})
 	assert.Equal(t, expected, actual)
 }
