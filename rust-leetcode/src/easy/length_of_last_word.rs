@@ -1,18 +1,18 @@
 pub fn length_of_last_word(s: String) -> i32 {
-    let mut lastWord = String::new();
+    let mut last_word = String::new();
     let chars: Vec<char> = s.chars().collect();
 
     for i in (0..chars.len()).rev() {
         if chars[i] == ' ' {
-            if lastWord.len() != 0 {
+            if last_word.len() != 0 {
                 break;
             }
         } else {
-            lastWord.push(chars[i]);
+            last_word.push(chars[i]);
         }
     }
 
-    return lastWord.len() as i32;
+    return last_word.len() as i32;
 }
 
 #[cfg(test)]
@@ -41,3 +41,4 @@ mod tests {
         assert_eq!(actual, expected);
     }
 }
+

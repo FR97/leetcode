@@ -1,18 +1,18 @@
 pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
-    let mut cM = m as usize;
-    let mut cN = n as usize;
+    let mut cm = m as usize;
+    let mut cn = n as usize;
 
     loop {
-        if cN == 0 {
+        if cn == 0 {
             break;
         }
 
-        if cM > 0 && nums1[cM - 1] > nums2[cN - 1] {
-            cM -= 1;
-            nums1[cM + cN] = nums1[cM];
+        if cm > 0 && nums1[cm - 1] > nums2[cn - 1] {
+            cm -= 1;
+            nums1[cm + cn] = nums1[cm];
         } else {
-            cN -= 1;
-            nums1[cM + cN] = nums2[cN];
+            cn -= 1;
+            nums1[cm + cn] = nums2[cn];
         }
     }
 }
@@ -52,3 +52,4 @@ mod tests {
         assert_eq!(nums1, expected);
     }
 }
+
